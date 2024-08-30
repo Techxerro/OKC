@@ -1,0 +1,163 @@
+.servicebanner{
+    background:url('../Assets/img/Rectangle\ 9\ \(2\).png');
+}
+
+.tab-contain{
+    padding:25px 40px;
+    background-color: #efefef;
+    border-radius: 15px;
+}
+
+.tab-contain .tab{
+    font-size:18px;
+    padding:15px 0;
+    position: relative;
+    cursor:pointer;
+}
+
+.tab-contain .tab svg{
+    position: absolute;
+    right:0;
+}
+.tab-contain .tab:hover{
+    color:#158842;
+}
+.tab-contain .tab:hover svg{
+    right:-5px;
+    transition: all 0.75s;
+}
+
+
+.tab-content img{
+    width:100%;
+    min-height:500px;
+    max-height:500px;
+    border-radius: 10px;
+    margin-bottom:20px;
+}
+
+
+.tab-content h2{
+    font-size:50px;
+}
+
+.tab-content h3{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.tab-content h3 span{
+    color:#158842;
+}
+
+.tab-content b, ol li{
+    font-size:18px;
+}
+
+.tab-content b{
+    font-weight:700;
+}
+
+.tab-content ol{
+    padding:20px;
+}
+
+.tab-contain ol li::marker{
+    font-weight: bold!important;
+}
+
+.tab-content ol li{
+    padding-bottom: 10px;
+}
+.tab-contain .tab a{
+    color:#000!important;
+}
+/* .tab-contain .tab:hover{
+    background-color: #fff ;
+} */
+
+.greenbox{
+    margin-top:50px;
+    background-color: #158842;
+    padding:50px 50px 150px;
+    text-align: center;
+    color:#fff;
+    border-radius: 15px;
+}
+
+.greenbox button{
+    background: transparent;
+    color:#fff;
+    border:1px solid #fff;
+    padding:15px 25px;
+    margin-top:40px;
+    width:50%;
+}
+
+.greenbox-visible-mobile{
+    display: none;
+}
+
+/****TABLET****/
+@media (min-width: 481px) and (max-width: 1023px) {
+    .servicetab-section{
+        padding:50px 10px!important;
+    }
+
+    .servicetab-section .tab-contain{
+        padding:25px 20px;
+    }
+
+    .tab-contain img{
+        min-height: 380px;
+        max-height: 380px;
+    }
+
+    .greenbox{
+        padding:20px 15px;
+    }
+
+    .greenbox h3{
+        font-size:35px;
+    }
+
+    .greenbox button{
+        margin-top:15px;
+        width:50%;
+    }
+    
+    .greenbox{
+        display: none;
+    }
+    
+    .greenbox-visible-mobile{
+        display: block;
+        padding:40px 20px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .servicetab-section{
+        padding:50px 10px!important;
+    }
+
+    .greenbox{
+        display: none;
+    }
+
+    .tab-content img{
+        margin:20px 0;
+        min-height: 250px;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .greenbox-visible-mobile{
+        display: block;
+        padding:40px 20px;
+    }
+
+
+}

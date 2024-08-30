@@ -1,0 +1,42 @@
+/* @import url('../src/Assets/TT-Norms-Fonts/TT-Norms-Fonts/TTNorms-Heavy.otf'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'myFirstFont';
+  src: url('../src/Assets/TT-Norms-Fonts/TT-Norms-Fonts/TTNorms-Regular.otf');
+}
+
+body {
+  margin: 0;
+  font-family:'myFirstFont!important' ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,h1,h2,h3,h4,h5,h6,input,p{
+  font-family: 'myFirstFont';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+html, 
+body{
+  overflow-x: hidden;
+}
+
+
+
+.thumbnail{
+  padding: 120px 0;
+  text-align: center;
+  color:#fff;
+}
+
+.thumbnail p{
+  letter-spacing: 0.3em;
+}
+ 

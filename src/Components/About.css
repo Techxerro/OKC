@@ -1,0 +1,150 @@
+.aboutus{
+    background: url('../Assets/img/aboutbg.png');
+    background-size:cover;
+}
+
+.ourstory{
+    padding:80px 0;
+}
+
+.ourstory .imagegrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap:30px;
+}
+
+
+.story-img{
+    gap:25px;
+    padding-bottom: 30px;
+}
+
+.story-content{
+    padding-left:50px;
+    display: flex;
+     align-items: center;
+}
+
+.story-content span{
+    text-transform: uppercase;
+
+}
+.story-content h2{
+    text-transform: capitalize;
+}
+
+
+.note{
+    background-color: #1B884235;
+    padding:120px 0;
+    position: relative;
+}
+
+.note img{
+    position: absolute;
+}
+
+.note h2{
+    font-size:50px;
+}
+
+
+.our-mission{
+    padding:400px 0 80px;
+}
+
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .story-img img{
+        width:100%;
+    }
+
+    h2{
+        font-size:40px!important;
+    }
+
+    .box-container .box{
+        min-height:300px;
+        padding:20px 15px!important;
+    }
+
+    .box-container .box h3{
+        font-size:22px;
+    }
+
+    .expection-section img{
+        width:100%;
+    }
+
+    .greenbox{
+        padding:50px 20px 45px;
+    }
+}
+
+
+/****TABLET****/
+@media (min-width: 481px) and (max-width: 1023px) {
+    .ourstory{
+        padding:50px 25px!important;
+    }
+    .story-content{
+        padding-left:0;
+    }
+    .story-img{
+        gap:10px;
+    }
+
+    .story-img img{
+        width: 100%;
+    }
+
+    .note{
+        padding:50px 20px;
+    }
+
+    .note img{
+        position: relative;
+        width:100%;
+    }
+
+    .our-mission{
+        padding:80px 20px;
+    }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .ourstory{
+        padding:40px 10px;  
+    }
+    
+    .ourstory img{
+        width: 100%;
+    }
+    
+
+    .story-content{
+        padding-left:20px;
+    }
+    .note{
+        padding:50px 10px;
+    }
+
+    .note img{
+        width:100%;
+        max-height:300px;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .our-mission{
+        padding:50px 15px; 
+    }
+
+    .our-mission img{
+        padding-bottom:20px;
+    }
+}
+
+

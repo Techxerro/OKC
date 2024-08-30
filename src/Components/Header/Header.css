@@ -1,0 +1,587 @@
+/********************************************************************/
+/************************-Top Header-********************************/
+/********************************************************************/
+
+.top-header{
+    background:#158842;
+    color:#fff;
+    padding:10px;
+    font-size:14px;
+}
+
+.top-header .timeclock{ 
+    padding-right:10px;
+    width:30px;
+    height:20px;
+}
+
+.top-header .social-icon{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    transition: 0.7s ease;
+}
+
+.top-header .social-icon a{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+
+/********************************************************************/
+/****************************-Social Icons Hover-********************/
+/********************************************************************/
+
+.social-icon svg:hover{
+    scale:1.1;
+    transition: 0.5s;
+}
+
+.insta:hover, .facebook:hover,.linkedin:hover, .twitter:hover{
+    background: #fff;
+    border-radius: 100%;
+    transition: 0.5s linear;
+}
+
+.insta, .facebook, .linkedin, .twitter{
+    padding:5px;
+}
+
+.insta:hover svg path{
+    fill:#b200ed;
+}
+
+.facebook:hover svg path{
+    fill:blue;
+}
+
+.linkedin:hover svg path{
+    fill: darkblue;
+}
+
+.twitter:hover svg path{
+    fill:rgb(20, 183, 247);
+}
+
+.top-header .social-icon img{
+    width:15px;
+    height:15px;
+}
+
+.top-header .info{
+    display: flex;  
+    justify-content: end;
+    gap:10px;
+}
+
+.top-header .info svg{
+    padding-right:5px;
+}
+
+
+/********************************************************************/
+/*******************************-Main Header-************************/
+/********************************************************************/
+
+
+.main-header{
+    padding:10px 0;
+}
+
+.logo{
+    width:5vw;
+}
+
+.menu{
+    display: flex;
+    gap:25px;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin:0;
+}
+
+.menu a{
+    color:#000;
+    text-decoration: none;
+    padding:20px 0;
+    font-size: 17px;
+}
+
+.menu a:hover, .menu span:hover{
+    color:#158842;
+}
+
+.menu a:hover::after,.menu span:hover::after{
+    visibility: visible;
+}
+
+
+.menu .menuList::before{
+    content:'/';
+    position: relative;
+    left:-15px;
+}
+
+.menu li:nth-child(1):before{
+    content: '';
+}
+
+.menu a::after, .menu span::after{
+    content:'';
+    position: relative;
+    display: block;
+    width:100%;
+    height:2px;
+    background-color: #158842;
+    visibility: hidden;
+}
+
+.menu .openMenu{
+    cursor:pointer;
+    padding:30px 0;
+    font-size: 18px;
+}
+
+.menu .openMenu:hover .megaMenu{
+    display: flex!important;
+}
+
+.megaMenu{
+    position: absolute;
+    background: #fff;
+    left:0;
+    top:150px;
+    width:100%;
+    z-index:999;
+    display: none!important;
+    gap:0px;
+    animation:slideDown 0.5s ease;
+}
+.megaMenu a{
+    font-size:14px;
+    padding:0px 0!important;
+}
+.megaMenu a::after, .megaMenu a::before{
+    display: none;
+}
+
+.megaMenu .abtintro{
+    padding:0;
+    background-color: transparent   ;
+    padding:0px 40px;
+    padding-top: 50px;
+}
+
+.megaMenu .abtintro li{
+    display: grid;
+    grid-template-columns: auto; 
+    padding:10px 0;
+}
+.megaMenu .abtintro span{
+    padding: 0; 
+}
+
+@keyframes slideDown {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+a{
+    color:#fff;
+    text-decoration: none;
+}
+a:hover{
+    color:#efefef;
+}
+
+a:hover svg{
+    scale:1.2;
+    transition: 0.4s;
+}
+
+
+.megaMenu img{
+    width:40%;
+    height:400px;
+    object-fit: cover;
+}
+
+.megaMenu ul{
+    list-style: none;
+    padding-top:50px;
+}
+
+.megaMenu ul li img{
+    width:40px; 
+    height: 40px;
+    object-fit: cover;
+    margin-right:25px;
+}
+
+
+.megaMenu ul li{
+    padding:15px 0;
+    font-size: 16px;
+    font-weight:600;
+    cursor: pointer;
+    color:#000;
+    display: flex;
+    align-items: center;
+    
+}
+
+.megaMenu ul li:hover{
+    color:#000;
+}
+
+.megaMenu ul li:hover img{
+    scale:1.2;
+    transition: 0.35s;
+}
+
+.quotesbutton{
+    font-size:16px!important;
+ 
+    border:1px solid #000;
+    padding:15px 22px;
+    background-color: transparent;
+    color:#000;
+    float: right;
+    text-transform: uppercase;
+    font-size:18px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+}
+
+.quotesbutton::after{
+    content: '';
+    position: absolute;
+    top:0%;
+    left:0;
+    background-color: #c5edd3;
+    width:0%;
+    height: 100%;
+    z-index: -1;
+    animation: buttonAnimate reverse;
+    transition: all 0.7s;
+}
+
+.quotesbutton:hover{
+    color:#158842; 
+    border:1px solid #158842;
+    box-shadow: 0 10px 10px #00000023;
+    margin-top:-10px;
+    transition: all 0.5s;
+}
+
+.quotesbutton:hover::after{
+    width:100%;
+}
+
+.popupoverlay{
+    content: '';
+    width: 100vw;
+    height:100vh;
+    background: #00000075;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:99999;
+}
+
+.popup{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%,-50%);
+    z-index:999999999;
+    width:35%;
+    background: #fff;
+    padding:30px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #00000050;
+}
+
+.popup h2{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.popup form input, .popup form label{
+    width:100%;
+    margin:5px 0;
+}
+
+.popup form input{
+    padding:10px;
+    border:1px solid #00000045;
+    border-radius: 8px;
+}
+
+.popup form input[type="submit"]{
+    background: #158842;
+    color:#fff;
+    width:200px;
+}
+
+@keyframes buttonAnimate {
+    0%{
+        top:-100%;
+    }
+    100%{
+        top:0%;
+    }
+}
+
+
+.main-header-mobile{
+    display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .top-header{
+        padding:5px 0;
+        font-size: 13.5px;
+    }
+    .top-header .info{
+        display: grid;
+        gap:1px;
+    }
+    .main-header{
+        padding:10px 0;
+    }
+    .menu .openMenu{
+        padding:20px 0;
+    }
+
+    .menu a{
+        font-size:15px;
+    }
+
+    .megaMenu{
+        top:135px!important;
+    }
+
+    .megaMenu a{
+        font-size:15px!important;
+    }
+    
+    .quotesbutton{
+        font-size:16px!important;
+        padding:15px 12px!important;
+        border:1px solid #000;
+    }
+
+    .hero-slider .row{
+        padding:0 25px!important;
+    }
+
+    .slider-content h2 div{
+        width:80%
+    }
+
+    .slider-content form select{
+        padding:15px 25px!important;
+    }
+    .slider-content form input[type="submit"]{
+        padding:15px 20px!important;
+    }
+
+    .Why-section video{
+        width:300px!important;
+    }
+
+    .Why-section .whyus-img{
+        height:205px!important;
+    }
+
+    .Why-section .videoBox {
+        position: absolute;
+        bottom: 70px;
+        right: -78px;
+        box-shadow: 0 10px 10px #00000023;
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        width: 360px;
+    }
+
+    .Projects{
+        padding:100px 25px!important;
+    }
+
+    .Projects h2{
+        font-size:45px!important;
+    }
+
+    img#whyusimg{
+        width:100%;
+    }
+
+    .whyus-section .claims{
+        /* display: grid!important; */
+        gap:18px!important;
+    }
+
+    .testimonials-wrapper{
+        width:55vw!important;
+    }
+    .greenbtn, .greenbtn3{
+        padding:18px 20px!important
+    }
+}
+
+/***Tablet***/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .social-icon{
+        display: none!important;
+    }
+
+    .logo{
+        width:8vw!important;
+    }
+
+    .menu{
+        gap:15px!important;
+    }
+
+    .main-header{
+        display: none;
+    }
+
+    .main-header-mobile{
+        display: block;
+    }
+
+    .main-header-mobile{
+        padding:10px 0px;
+    }
+
+    .main-header-mobile svg{
+        margin-right:30px;
+    }
+    
+    .mobilemenu{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 99999;
+        width:100vw;
+        height:100vh;
+        color:#000;
+        background-color: #fff;
+        padding: 20px;
+        display: none;
+    }
+    .mobilemenu ul{
+        padding: 0;
+        list-style: none;
+    }
+    .mobilemenu li{
+        padding-bottom:20px;
+    }
+    .mobilemenu a{
+        color:#000;
+        font-size:17px;
+        padding-bottom:20px;
+    }
+    .mobilemenu svg{
+        position: absolute;
+        top:20px;
+        right:20px;
+    } 
+
+    .popup{
+        width:80vw;
+    }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .top-header .social-icon,.top-header .timing {
+        display: none!important;
+    }
+
+    .top-header{
+        padding: 10px 0;
+    }
+
+    .top-header .info{
+        justify-content: start;
+    }
+
+    .top-header .info a{
+        font-size:12px;
+    }
+
+    .main-header{
+        display: none;
+    }
+
+    .main-header-mobile{
+        display: block;
+    }
+
+    .main-header-mobile{
+        padding:10px 0px;
+    }
+
+    .main-header-mobile .logo{
+        width:60px;
+    }
+
+    .main-header-mobile svg{
+        margin-right:30px;
+    }
+    
+    .mobilemenu{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 99999;
+        width:100vw;
+        height:100vh;
+        color:#000;
+        background-color: #fff;
+        padding: 20px;
+        display: none;
+    }
+    .mobilemenu ul{
+        padding: 0;
+        list-style: none;
+    }
+    .mobilemenu li{
+        padding-bottom:20px;
+    }
+    .mobilemenu a{
+        color:#000;
+        font-size:17px;
+        padding-bottom:20px;
+    }
+    .mobilemenu svg{
+        position: absolute;
+        top:20px;
+        right:20px;
+    }
+
+    
+    .popup{
+        width:90vw;
+    }
+
+
+}
